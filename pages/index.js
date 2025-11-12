@@ -1,4 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import {
+  stats,
+  reports,
+  courses,
+  articles,
+  testimonials,
+} from "../lib/content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,83 +16,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const stats = [
-  { label: "Active Traders", value: "70,000+" },
-  { label: "Countries Reached", value: "25+" },
-  { label: "Years of Combined Experience", value: "120+" },
-];
-
-const reports = [
-  {
-    title: "Tiger Lab",
-    author: "Richard Moglen",
-    description: "Daily market breakdowns, setups, and live trade walk-throughs.",
-  },
-  {
-    title: "The Pounce Report",
-    author: "Oliver Kell",
-    description: "Championship swing trade ideas with exact entry, stop, and target.",
-  },
-  {
-    title: "The Jungle Brief",
-    author: "Ross Haber",
-    description: "Weekly macro view, portfolio positioning, and sector rotations.",
-  },
-  {
-    title: "Trend Alert",
-    author: "Stan Weinstein",
-    description: "Global leadership scans tracking Stage 2 breakouts and breakdowns.",
-  },
-];
-
-const courses = [
-  {
-    name: "Swing Trading Masterclass",
-    lead: "Oliver Kell • 2020 US Investing Champion",
-  },
-  {
-    name: "Stage Analysis Masterclass",
-    lead: "Stan Weinstein • Market Legend",
-  },
-  {
-    name: "Trading Psychology Masterclass",
-    lead: "Jared Tendler • Mental Game Coach",
-  },
-];
-
-const articles = [
-  {
-    title: "4 Key Types of Stock Gaps Every Trader Should Know",
-    tag: "Technical Analysis",
-    date: "November 4, 2025",
-  },
-  {
-    title: "Key Reversal Bar: 4 Warnings to Sell Stocks",
-    tag: "Technical Analysis",
-    date: "September 8, 2025",
-  },
-  {
-    title: "Stan Weinstein’s Secrets for Profiting in Bull and Bear Markets",
-    tag: "Trading Books",
-    date: "August 28, 2025",
-  },
-];
-
-const testimonials = [
-  {
-    quote:
-      "If you want to learn and follow the fiercest traders in the jungle, join Trader Tiger. They will sharpen your edge for decades to come.",
-    name: "Roy Mattox",
-    role: "Portfolio Manager",
-  },
-  {
-    quote:
-      "Trader Tiger combines elite coaching with transparent results. It’s the community I wish I had when I first started trading.",
-    name: "Leif Soreide",
-    role: "2019 US Investing Champion",
-  },
-];
 
 export default function Home() {
   return (
@@ -131,7 +61,7 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-6">
                 <a
-                  href="#platform"
+                  href="/tigerview"
                   className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-slate-950 transition hover:-translate-y-0.5 hover:bg-lime-200"
                 >
                   Explore TigerView
@@ -279,9 +209,12 @@ export default function Home() {
                 <li>• Industry group rankings to spot quiet accumulation early</li>
                 <li>• Seamless integration with Trader Tiger reports and playbooks</li>
               </ul>
-              <div className="mt-8 inline-flex items-center gap-2 rounded-full border border-lime-300/60 px-6 py-3 text-sm font-semibold text-lime-200 hover:bg-lime-300/10">
+              <a
+                href="/tigerview"
+                className="mt-8 inline-flex items-center gap-2 rounded-full border border-lime-300/60 px-6 py-3 text-sm font-semibold text-lime-200 hover:bg-lime-300/10"
+              >
                 Experience TigerView →
-              </div>
+              </a>
             </div>
             <div className="flex flex-col justify-between gap-6 rounded-3xl border border-white/5 bg-black/50 p-8">
               <div className="grid grid-cols-2 gap-6 text-sm text-white/70">
